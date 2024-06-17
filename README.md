@@ -25,7 +25,7 @@ Since the scripts are PHP, they are cross-platform.
 ## Order of Play
 The first script, `alarm_set.php` is run just a few minutes before the alarm goes off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on.
 
-The second script `alarm.php` loads the playlist and starts it playing.
+The second script `alarm.sh` loads the playlist and starts it playing. In a Winows environment, use `alarm.cmd` instead - otherwise its usage is the same.
 
 Both of the above scripts can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine.
 
@@ -37,7 +37,7 @@ This way my speakers automagically come alive when I turn my computer on - and a
 ## Additional Info
 I wrote the scripts for my benefit, but have made them as generic as possible. Invoking a playlist called "Alarm" has the benefit that you can change the contents of the playlist without having to change the scripts.
 
-The `alarm_set.php` script is called separately from `alarm.php` to guarantee (as much as that is possible) that it has turned off all the other speakers before the alarm plays.
+The `alarm_set.php` script is called separately from `alarm.sh` to guarantee (as much as that is possible) that it has turned off all the other speakers before the alarm plays.
 
 This setup allows occupants of your dwelling to listen to music through the night, and nobody has to worry about making sure they turn speakers off before they go to sleep.
 
@@ -56,11 +56,13 @@ define("_MPD_HOST_", "127.0.0.1" );
 define("_ALARM_CLOCK_", "AlarmClock" );
 ```
 
-`alarm.php` is called from cron like this (assuming you want to wake up at 6am every day):
+`alarm.sh` is called from cron like this (assuming you want to wake up at 6am every day):
 ```
-0 6 * * * /path/to/alarm.php hostname
+0 6 * * * /path/to/alarm.sh hostname
 ```
 ...where `hostname` is the name of the machine running MPD.
+
+In a Windows environment, edit `alarm.cmd` and change the paths to mpc to be more appropriate.
 
 In `alarm_reset.php`, change these variables as required:
 ```
