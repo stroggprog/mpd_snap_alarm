@@ -1,6 +1,6 @@
 # mpd_snap_alarm
 
-  1. https://github.com/stroggprog/mpd_snap_alarm/blob/main/README.md#about
+  1. [About](https://github.com/stroggprog/mpd_snap_alarm/blob/main/README.md#about)
   2. https://github.com/stroggprog/mpd_snap_alarm/blob/main/README.md#requirements
   3. 
 ## About
