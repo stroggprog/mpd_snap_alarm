@@ -1,8 +1,11 @@
 # mpd_snap_alarm
 
-  1. [About](https://github.com/stroggprog/mpd_snap_alarm/blob/main/README.md#about)
-  2. [Requirements](https://github.com/stroggprog/mpd_snap_alarm/blob/main/README.md#requirements)
-  3. [Order of Play](#requirements)
+  1. [About](#about)
+  2. [Requirements](#requirements)
+  3. [Order of Play](#order-of-play)
+  4. [Additional Info](#additional-info)
+  5. [Configuration](#configuration)
+
 ## About
 I have a "whole-house" MPD/Snapcast music system, and decided to turn it into an alarm clock, so created these three scripts written in PHP to:
 
