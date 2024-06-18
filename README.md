@@ -5,6 +5,7 @@
   3. [Order of Play](#order-of-play)
   4. [Additional Info](#additional-info)
   5. [Configuration](#configuration)
+  6. [Debugging](#debugging)
 
 ## About
 I have a "whole-house" MPD/Snapcast music system, and decided to turn it into an alarm clock, so created these three scripts written in PHP to:
