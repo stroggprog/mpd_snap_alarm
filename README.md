@@ -46,6 +46,24 @@ Yeah, I put configuration at the end of the readme, because I felt it necessary 
 ```chmod +x alarm_set.php```
 Repeat for the other two scripts, of course.
 
+In the first line of each script is a hash-bang to the rogram required to run the script. For PHP:
+```
+#!/usr/bin/php
+```
+And for the shell script:
+```
+#!/usr/bin/bash
+```
+If your shell is not bash, or not in the same location, please adjust accordingly. The same goes for the PHP scripts.
+
+**Windows**
+The cmd file needs no #! line of course. To run the scripts, you'll either have to call them thus:
+```
+> /path/to/php scriptname.php
+```
+... or ensure PHP is on the PATH environment variable.
+**end-of-windows-note**
+
 In `alarm_set.php` you'll find two constants you'll need to set as appropriate:
 ```
 // set this to the name of the machine MPD/SnapServer are running on if not localhost
@@ -76,3 +94,5 @@ define("_ALARM_CLOCK_", "AlarmClock" );
 // list the machines you want to mute, all others will be unmuted
 $mutables = array( _ALARM_CLOCK_ /*, "another_machine" */ );
 ```
+For those new to scripting PHP, the bit between `/*` and `*/` is a comment. Removing those two markers makes the code between them active.
+For
