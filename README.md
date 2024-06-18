@@ -95,4 +95,5 @@ define("_ALARM_CLOCK_", "AlarmClock" );
 $mutables = array( _ALARM_CLOCK_ /*, "another_machine" */ );
 ```
 For those new to scripting PHP, the bit between `/*` and `*/` is a comment. Removing those two markers makes the code between them active.
-For
+
+That's all there is to it. Good luck.
