@@ -92,8 +92,17 @@ define("_MPD_HOST_", "127.0.0.1" );
 define("_ALARM_CLOCK_", "AlarmClock" );
 
 // list the machines you want to mute, all others will be unmuted
+
 $mutables = array( _ALARM_CLOCK_ /*, "another_machine" */ );
 ```
 For those new to scripting PHP, the bit between `/*` and `*/` is a comment. Removing those two markers makes the code between them active.
 
 That's all there is to it. Good luck.
+
+## Debugging
+I've left debugging code in the php scripts. Switch the comment around on these two lines so __DEBUG__ is set to true:
+```
+//define("__DEBUG__", false);
+define("__DEBUG__", true);
+```
+At any point in the code you can call `debug( "text to dump" );` to dump text to the screen - note you should invoke the script manually if you want to see the output. Alternately, you can change the `debug()` function to append to a file with `file_put_contents( filename, "$t\n", FILE_APPEND );`
