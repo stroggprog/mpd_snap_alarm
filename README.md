@@ -8,7 +8,7 @@
   6. [Debugging](#debugging)
 
 ## About
-I have a "whole-house" MPD/Snapcast music system, and decided to turn it into an alarm clock, so created these three scripts written in PHP to:
+I have a "whole-house" MPD/Snapcast music system, and decided to turn it into an alarm clock, so created these three scripts - two written in PHP, one a bash script (a Windows cmd version is also included), to:
 
   1. Turn off all speakers in the house except the bedroom
   2. Load and play a playlist named "Alarm"
