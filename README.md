@@ -54,6 +54,7 @@ To run the scripts, you'll either have to call them thus:
 > /path/to/php scriptname.php
 ```
 ... or ensure PHP is on the PATH environment variable.
+
 **end-of-windows-note**
 
 In `alarm_set.php` you'll find three constants you'll need to set as appropriate:
@@ -67,7 +68,7 @@ define("_ALARM_CLOCK_", "AlarmClock" );
 
 define("__ALARM_PLAYLIST__", "Alarm" );
 ```
-The \_\_ALARM_PLAYLIST\_\_ allows you to choose another playlist. Once setup, rather than changing the name of the playlist, it would be easier to change the __contents__.
+The \_\_ALARM_PLAYLIST\_\_ allows you to choose another playlist. Once setup, rather than changing the name of the playlist, it would be easier to change the _contents_.
 
 In `alarm_reset.php`, change these variables as required:
 ```
