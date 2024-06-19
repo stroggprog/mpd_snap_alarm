@@ -20,16 +20,15 @@ All the scripts can run as a regular user, so no root privileges required. The r
 
   * PHP (7.4 or better, untested with earlier versions) with Curl enabled
   * A configured MPD/Snapcast multi-room audio system
-  * An installed mpc (music player client)
 
 Since the scripts are PHP, they are cross-platform.
 
 ## Order of Play
-The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then runs the alarm playlist.
+The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then clears the current queue, loads the alarm plylist and sets it to play.
 
 The above script can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine. If you can set a cron job, this might be a typical cron entry:
 ```
-# change the path to something appropriate
+# change the path to something appropriate. Runs at 8am every day
 0 8 * * * /path/to/alarmset.php
 ```
 
@@ -45,7 +44,7 @@ I wrote the scripts for myself, but have made them as generic as possible. Invok
 This setup allows occupants of your dwelling to listen to music through the early hours of the night, and nobody has to worry about making sure they turn speakers off before they go to sleep.
 
 ## Configuration
-Yeah, I put configuration at the end of the readme, because I felt it necessary to understand how things worked before going into config options. First off, if you are running on a unix-like system, you'll need to set the scripts to executable:
+First off, if you are running on a unix-like system, you'll need to set the scripts to executable:
 ```chmod +x alarm_set.php```
 Repeat for the other script, of course.
 
