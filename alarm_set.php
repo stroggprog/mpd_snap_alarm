@@ -119,6 +119,7 @@ foreach( $r as $o => $d ) {
 //debug( json_encode( $r ));
 
 //** MPD Direct Comms **//
+$host = _MPD_HOST_;
 $port = "6600";
 $url = "tcp://$host:$port";
 $command = "command_list_begin\r\n"
