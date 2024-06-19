@@ -27,9 +27,14 @@ Since the scripts are PHP, they are cross-platform.
 ## Order of Play
 The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then runs the alarm playlist.
 
-The above script can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine.
+The above script can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine. If you can set a cron job, this might be a typical cron entry:
+```
+# change the path to something appropriate
+0 8 * * * /path/to/alarmset.php
+```
 
-The third script I run on my desktop machine. It's GNU/Linux Debian, and I power it down each night, so I run the script using the bootup macro in cron:
+The second script I run on my desktop machine. It's GNU/Linux Debian, and I power it down each night, so I run the script using the bootup macro in cron:
+
 ```@reboot /path/to/script/alarm_reset.php```
 This script turns the bedroom speakers off (so the spiders can go back to sleep), and turns on any speakers defined in an array in the script.
 
