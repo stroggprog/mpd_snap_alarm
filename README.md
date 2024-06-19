@@ -34,9 +34,9 @@ The above script can be run on any machine that is running 24/7, but the two bes
 ```
 
 The second script I run on my desktop machine. It's GNU/Linux Debian, and I power it down each night, so I run the script using the bootup macro in cron:
-
-```@reboot /path/to/script/alarm_reset.php```
-
+```
+@reboot /path/to/script/alarm_reset.php
+```
 This script turns the bedroom speakers off (so the spiders can go back to sleep), and turns on any speakers defined in an array in the script.
 
 ## Additional Info
