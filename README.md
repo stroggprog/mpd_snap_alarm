@@ -67,7 +67,7 @@ define("_ALARM_CLOCK_", "AlarmClock" );
 
 define("__ALARM_PLAYLIST__", "Alarm" );
 ```
-The __ALARM_PLAYLIST__ allows yo to choose another playlist. Once setup, rthr than changing the name of the playlist, it would be easier to change the __contents__.
+The \__ALARM_PLAYLIST_\_ allows you to choose another playlist. Once setup, rather than changing the name of the playlist, it would be easier to change the __contents__.
 
 In `alarm_reset.php`, change these variables as required:
 ```
@@ -79,7 +79,6 @@ define("_MPD_HOST_", "127.0.0.1" );
 define("_ALARM_CLOCK_", "AlarmClock" );
 
 // list the machines you want to mute, all others will be unmuted
-
 $mutables = array( _ALARM_CLOCK_ /*, "another_machine" */ );
 ```
 For those new to scripting PHP, the bit between `/*` and `*/` is a comment. Removing those two markers makes the code between them active.
