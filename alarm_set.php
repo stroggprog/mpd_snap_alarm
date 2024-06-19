@@ -10,6 +10,8 @@ define("_MPD_HOST_", "127.0.0.1" );
 // note that a hostname is required, you can't use localhost or 127.0.0.1
 define("_ALARM_CLOCK_", "AlarmClock" );
 
+define("__ALARM_PLAYLIST__", "Alarm" );
+
 function debug($t) {
 	if ( __DEBUG__ ){
 		echo "$t\n";
@@ -47,6 +49,7 @@ function nextID(){
 
 $host = "127.0.0.1";
 $port = "1780";
+$tcp_port = "6600";
 $rpcgate = "jsonrpc";
 $tstamp = time()-5; // just to make sure we don't delete anything we shouldn't
 $mid = 0;
@@ -115,5 +118,33 @@ foreach( $r as $o => $d ) {
 }
 
 //debug( json_encode( $r ));
+
+//** MPD Direct Comms **//
+$port = "6600";
+$url = "tcp://$host:$port";
+$command = "command_list_begin\r\n"
+		. "clear\r\n"
+		. "load ".__ALARM_PLAYLIST__."\r\n"
+		. "play\r\n"
+		. "command_list_end\r\n";
+
+debug($command);
+
+//echo sendMessage( $url, $command );
+$h = fsockopen( $host, $port, $errno, $errstr, 3 );
+if (!$h) {
+    debug("Error: $errstr ($errno)<br />\n");
+}
+else {
+	$v = fgets($h, 128);
+	debug("read #1:\n".$v);
+	fwrite( $h, $command );
+
+	// we don't actually care about the success/failure response
+	// it either worked or it didn't. If it didn't, we probably won't wake up
+    $v = fgets($h, 128);
+	debug("read #2:\n".$v);
+    fclose($h);
+}
 
 ?>
