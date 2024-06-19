@@ -26,8 +26,6 @@ Since the scripts are PHP, they are cross-platform.
 ## Order of Play
 The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then runs the alarm playlist.
 
-~~The second script `alarm.sh` loads the playlist and starts it playing. In a Winows environment, use `alarm.cmd` instead - otherwise its usage is the same.~~
-
 The above script can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine.
 
 The third script I run on my desktop machine. It's GNU/Linux Debian, and I power it down each night, so I run the script using the bootup macro in cron:
