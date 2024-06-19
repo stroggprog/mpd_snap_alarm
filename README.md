@@ -67,7 +67,7 @@ define("_ALARM_CLOCK_", "AlarmClock" );
 
 define("__ALARM_PLAYLIST__", "Alarm" );
 ```
-The \__ALARM_PLAYLIST_\_ allows you to choose another playlist. Once setup, rather than changing the name of the playlist, it would be easier to change the __contents__.
+The \_\_ALARM_PLAYLIST\_\_ allows you to choose another playlist. Once setup, rather than changing the name of the playlist, it would be easier to change the __contents__.
 
 In `alarm_reset.php`, change these variables as required:
 ```
