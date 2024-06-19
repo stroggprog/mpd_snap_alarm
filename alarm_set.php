@@ -1,7 +1,6 @@
 #!/usr/bin/php
 <?php
 define("__DEBUG__", false);
-//define("__DEBUG__", true);
 
 // set this to the name of the machine MPD/SnapServer are running on if not localhost
 define("_MPD_HOST_", "127.0.0.1" );
