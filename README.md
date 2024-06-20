@@ -10,7 +10,7 @@
 ## About
 I have a "whole-house" MPD/Snapcast music system, and decided to turn it into an alarm clock, so created these two scripts written in PHP to:
 
-  1. Delete any snapcast streams that have gone stale
+  1. Delete any snapcast streams that have gone stale (will be recreated on demand if needed)
   2. Turn off all speakers in the house except the bedroom
   3. Load and play a playlist named "Alarm"
   4. Revert settings (turn off the bedroom speakers, turn on selected speakers around the house)
