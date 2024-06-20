@@ -1,5 +1,5 @@
 # mpd_snap_alarm
-v1.0.2
+v1.0.3
 
   1. [About](#about)
   2. [Requirements](#requirements)
