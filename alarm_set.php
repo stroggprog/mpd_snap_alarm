@@ -97,6 +97,7 @@ foreach( $r as $o => $d ) {
 				));
 		debug($data);
 		sendMessage($url, $data);
+		continue; // don't attempt to mute something we just deleted!
 	}
 	// mute any stream that isn't the alarm clock
 	$data = json_encode( array( 
@@ -112,8 +113,6 @@ foreach( $r as $o => $d ) {
 					)
 		));
 	sendMessage($url, $data);
-
-
 }
 
 //debug( json_encode( $r ));
