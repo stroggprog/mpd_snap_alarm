@@ -24,7 +24,7 @@ All the scripts can run as a regular user, so no root privileges required. The r
 Since the scripts are PHP, they are cross-platform.
 
 ## Order of Play
-The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then clears the current queue, loads the alarm plylist and sets it to play.
+The first script, `alarm_set.php` is run when you want the alarm to go off, and fulfills the function of turning off all the speakers around the house while ensuring the bedroom speakers are turned on, then clears the current queue, loads the alarm playlist and sets it to play.
 
 The above script can be run on any machine that is running 24/7, but the two best choices would be either the bedroom device or the actual MPD/SnapcastServer machine. I use the bedroom machine. If you can set a cron job, this might be a typical cron entry:
 ```
